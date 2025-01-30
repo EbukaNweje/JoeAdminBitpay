@@ -9,7 +9,7 @@ import {useEffect, useState} from "react";
 const Login = () => {
 
     const getAllUserData = () => {
-        const url = "https://joe-backend-bit-trade.vercel.app/api/alluserdata";
+        const url = "https://joe-backend-bit-trade-lime.vercel.app/api/alluserdata";
         axios
             .get(url)
             .then((response) => {
@@ -50,7 +50,7 @@ const Login = () => {
             console.log(userData);
             axios
                 .post(
-                    "https://joe-backend-bit-trade.vercel.app/api/adminlogin",
+                    "https://joe-backend-bit-trade-lime.vercel.app/api/adminlogin",
                     userData
                 )
                 .then((res) => {

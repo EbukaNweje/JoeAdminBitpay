@@ -8,7 +8,7 @@ const ManageDeposit = () => {
     const [userData, setUserData] = useState([]);
 
     const acceptDeposit = (depositId) => {
-        const url = `https://joe-backend-bit-trade.vercel.app/api/confirm-deposit/${depositId}`;
+        const url = `https://joe-backend-bit-trade-lime.vercel.app/api/confirm-deposit/${depositId}`;
         axios.post(url)
             .then((response) => {
                 console.log(response.data.message);
@@ -21,7 +21,7 @@ const ManageDeposit = () => {
     };
 
     const getallDeposit = () => {
-        const url = "https://joe-backend-bit-trade.vercel.app/api/alldeposit";
+        const url = "https://joe-backend-bit-trade-lime.vercel.app/api/alldeposit";
         axios.get(url)
             .then((response) => {
                 console.log(response.data);
@@ -34,7 +34,7 @@ const ManageDeposit = () => {
 
 
     const deleteItem = async (depositId) => {
-          axios.delete(`https://joe-backend-bit-trade.vercel.app/api/deleteoneDeposit/${depositId}`)
+          axios.delete(`https://joe-backend-bit-trade-lime.vercel.app/api/deleteoneDeposit/${depositId}`)
           .then((response)=>{
             console.log(response)
             toast.success(response.data.message);

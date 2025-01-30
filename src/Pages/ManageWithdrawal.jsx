@@ -20,7 +20,7 @@ const ManageWithdrawal = () => {
    };
 
     const acceptDeposit = (withdrawId) => {
-        const url = `https://joe-backend-bit-trade.vercel.app/api/confirm-withdrawal/${withdrawId}`;
+        const url = `https://joe-backend-bit-trade-lime.vercel.app/api/confirm-withdrawal/${withdrawId}`;
         axios.post(url)
             .then((response) => {
                 console.log(response.data.user._id)
@@ -34,7 +34,7 @@ const ManageWithdrawal = () => {
     };
 
     const getallDeposit = () => {
-        const url = "https://joe-backend-bit-trade.vercel.app/api/allwithdrawal";
+        const url = "https://joe-backend-bit-trade-lime.vercel.app/api/allwithdrawal";
         axios.get(url)
             .then((response) => {
                 console.log(response.data);
@@ -47,7 +47,7 @@ const ManageWithdrawal = () => {
 
 
     const deleteItem = async (withdrawId) => {
-        axios.delete(`https://joe-backend-bit-trade.vercel.app/api/deleteoneWithdraw/${withdrawId}`)
+        axios.delete(`https://joe-backend-bit-trade-lime.vercel.app/api/deleteoneWithdraw/${withdrawId}`)
         .then((response)=>{
           console.log(response)
           toast.success(response.data.message);

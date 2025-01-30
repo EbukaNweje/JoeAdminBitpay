@@ -14,7 +14,7 @@ const UserDetails = () => {
     const Nav = useNavigate()
 
     const handleGetOneUserData = () => {
-        const url = `https://joe-backend-bit-trade.vercel.app/api/userdata/${id}`;
+        const url = `https://joe-backend-bit-trade-lime.vercel.app/api/userdata/${id}`;
         axios
             .get(url)
             .then((res) => {
@@ -86,7 +86,7 @@ const UserDetails = () => {
     //         const toastLoadingId = toast.loading("Please wait...");
     //         const data = reqData;
     //         console.log(data);
-    //         const url = `https://joe-backend-bit-trade.vercel.app/api/userdata/${id}`;
+    //         const url = `https://joe-backend-bit-trade-lime.vercel.app/api/userdata/${id}`;
     //         console.log(url);
     //         axios
     //             .patch(url, data)
@@ -150,7 +150,7 @@ const UserDetails = () => {
             console.log(reqData);
     
             // Proceed with the API call
-            const url = `https://joe-backend-bit-trade.vercel.app/api/userdata/${id}`;
+            const url = `https://joe-backend-bit-trade-lime.vercel.app/api/userdata/${id}`;
             axios
                 .patch(url, reqData)
                 .then((response) => {
@@ -193,6 +193,8 @@ const UserDetails = () => {
         }, 3000);
         setShowActions(false);
     };
+
+    
 
     const [addRoi, setAddRoi] = useState(false);
     const handleAddRoi = () => {
@@ -245,7 +247,7 @@ const UserDetails = () => {
         setDeleteUser(false);
         const toastLoadingId = toast.loading("Please wait...");
         setShowActions(false);
-        const url = `https://joe-backend-bit-trade.vercel.app/api/userdata/${id}`;
+        const url = `https://joe-backend-bit-trade-lime.vercel.app/api/userdata/${id}`;
         axios
             .delete(url)
             .then((res) => {
