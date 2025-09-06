@@ -60,7 +60,7 @@ const UserDetails = () => {
   const [creditDebitValue, setCreditDebitValue] = useState("");
   const [creditDebitItem, setCreditDebitItem] = useState("");
   let reqData;
-  console.log(creditDebitItem);
+  console.log(oneUserData);
 
   // if (creditDebitItem === "bonus") {
   //     reqData = {bonus: `${Number(creditDebitValue) + Number(oneUserData.bonus)}`};
@@ -286,7 +286,7 @@ const UserDetails = () => {
     setTimeout(() => {
       toast.dismiss(toastLoadingId);
       toast.success("Success");
-      window.location.href = `https://fininvestohub-account.vercel.app/#/${id}`;
+      window.location.href = `https://bitpaytradeauth.vercel.app/#/${id}`;
     }, 3000);
     setShowActions(false);
   };
@@ -411,12 +411,12 @@ const UserDetails = () => {
                                         >
                                             Send Email
                                         </div> */}
-                    <div
+                    {/* <div
                       className="w-full h-max flex items-center pl-1 py-1 text-sm hover:bg-gray-300 cursor-pointer text-[#31ce36]"
                       onClick={() => setLogin(!login)}
                     >
                       Login as {oneUserData.userName}
-                    </div>
+                    </div> */}
                     <div
                       className="w-full h-max flex items-center pl-1 py-1 text-sm hover:bg-gray-300 cursor-pointer text-[#f25961]"
                       onClick={() => {
@@ -834,7 +834,7 @@ const UserDetails = () => {
         }}
         okText={"Proceed"}
         closeIcon={true}
-        title={`You are about to login as ${oneUserData.fullName}.`}
+        title={`You are about to login as ${oneUserData.userName}.`}
       ></Modal>
       <Modal
         open={deleteUser}
