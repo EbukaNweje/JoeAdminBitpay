@@ -23,6 +23,7 @@ const Login = () => {
     getAllUserData();
   }, []);
   const nav = useNavigate();
+  const year = new Date().getFullYear();
 
   const [loading, setLoading] = useState(false);
 
@@ -122,7 +123,7 @@ const Login = () => {
             </div>
             <div className="w-full text-center">
               <p className="text-sm">
-                © Copyright 2024 Fininvestohub All Rights Reserved.
+                © Copyright {year} Fininvestohub All Rights Reserved.
               </p>
             </div>
           </div>
